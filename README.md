@@ -1,6 +1,7 @@
 # calendar
 a calendar plugin
 案列：
+```
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +37,9 @@ a calendar plugin
 </body>
 
 </html>
+```
 用法： 
+```
 Calendar.loadCalendar({
     		target: target, // 点击目标元素，例如input（必须传，其他参数可传可不传）
     		type: 'inline', // center（居中显示）|inline（内联）
@@ -47,3 +50,4 @@ Calendar.loadCalendar({
     			target.value = date;
     		}
 })
+```
