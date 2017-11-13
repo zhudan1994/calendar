@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>日期插件</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    </style>
+</head>
+
+<body>
+	<input type="text" name="" id="btn">
+	<script type="text/javascript" src="calendar.js"></script>
+    <script type="text/javascript">
+    document.getElementById('btn').onclick = function (e) {
+    	var target = (e && e.target) || window.event.srcElement;
+    	Calendar.loadCalendar({
+    		target: target,
+    		type: 'inline', // center|inline
+    		lang: 'zh-cn', //zh-cn||en
+    		minDate: '2017-10-10', // 可传可不传
+    		maxDate: '2017-12-01',
+    		cb: function (date) {
+    			target.value = date;
+    		}
+    	})
+    }
+    </script>
+</body>
+
+</html>
